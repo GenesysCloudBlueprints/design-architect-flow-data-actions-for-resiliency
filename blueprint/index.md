@@ -3,7 +3,7 @@ title: Design Architect flow data actions for resiliency
 author: jenissa.barrera
 indextype: blueprint
 icon: blueprint
-image:
+image: images/resilient-architect-workflow.png
 category: 4
 summary: |
   This Genesys Cloud Developer Blueprint provides guidance on how to handle various data action failure scenarios, offers insights into data action scalability concerns, explains how to improve flow scalability with a data action response cache that uses data tables, how to implement the data table cache in a call flow, and how to deploy the data table and call flows.
