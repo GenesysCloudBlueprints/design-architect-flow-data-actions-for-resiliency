@@ -5,4 +5,4 @@
 
 This Genesys Cloud Developer Blueprint provides instructions on how to handle various data action failure scenarios, offers insights into data action scalability concerns, explains how to improve flow scalability with a data action response cache that uses data tables, how to implement the data table cache in a call flow, and how to deploy the data table and call flows.
 
- ![Resilient Architect flow](images/resilient-architect-workflow.png "Resilient Architect flow")
+ ![Resilient Architect flow](blueprint/images/resilient-architect-workflow.png "Resilient Architect flow")
