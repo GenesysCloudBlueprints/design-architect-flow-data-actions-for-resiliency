@@ -98,15 +98,15 @@ Knowledge is power, so familiarize yourself with Genesys Cloud's rate limits her
 
 #### Additional rate limits to be aware of
 If you use the Genesys Cloud Data Actions integration to enhance your flow with data actions that invoke the Genesys Cloud Platform API, keep the following default Genesys Cloud rate limits in mind:
-* 15 concurrent data action executions
-* 900 data action executions per minute
+* 50 concurrent data action executions
+* 2500 data action executions per minute
 * 300 platform API requests per OAuth2 token per minute
 
 :::primary
 **Important:** Exceeding these limits will cause data action executions to fail, and without proper handling, your flow could also fail.
 :::
 
-While you can perform 900 data actions executions per minute, if you are using a data action to call a Genesys Cloud API, you can only make 300 requests per OAuth2 token before the platform API starts rate-limiting requests from that token.  
+While you can perform 2500 data actions executions per minute, if you are using a data action to call a Genesys Cloud API, you can only make 300 requests per OAuth2 token before the platform API starts rate-limiting requests from that token.  
 
 Some developers try to get around these rate limits by having multiple OAuth2 clients or generating additional OAuth2 client tokens. In Genesys Cloud, hitting rate limits is a signal that you are not using our APIs correctly. For example, you are not using caching, or you are doing excessive polling.
 
@@ -115,8 +115,8 @@ Individual services within Genesys Cloud can have their own rate limits that are
 :::primary
 **Important**
 * If you try to circumvent the rate limits in the platform API, you can inadvertently impact your entire organization's ability to use Genesys Cloud, as crucial services further down the Genesys Cloud stack will begin rate-limiting. This could result in a partial or complete outage of your contact center.  
-* Respect the 300 requests per minute limit per token and use a single token in your integration.
-* Finally, per our [Terms of Service](https://help.mypurecloud.com/wp-content/uploads/2020/10/Genesys-Cloud-TCs-Global.pdf "Downloads our Terms of Service PDF file") Genesys Cloud does reserve the right to shut down an OAuth2 client that is causing platform instability.
+* Respect the 2500 requests per minute limit per token and use a single token in your integration.
+* Finally, per our [Terms of Service](https://help.mypurecloud.com/articles/global-genesys-cloud-service-terms-and-conditions/ "Views our Terms of Service") Genesys Cloud does reserve the right to shut down an OAuth2 client that is causing platform instability.
 :::
 
 ###  Design and implement a data action response cache
